@@ -1,7 +1,7 @@
 <?php
 namespace App\Libraries;
 
-class Hash
+class CIAuth
 {
 
     public static function setCIAuth($result){
