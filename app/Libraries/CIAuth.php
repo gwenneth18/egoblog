@@ -16,7 +16,7 @@ class Hash
         $session = session();
         if($session->has('logged_in')){
          if( $session->has('userdata') ){
-            return $session->get('usedata')['id'];
+            return $session->get('userdata')['id'];
          }else{
             return null;
          }
