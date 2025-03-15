@@ -12,7 +12,8 @@ $routes->group('admin', static function($routes){
     $routes->group('',[], static function($routes){
         // $routes->view('example-page','example-page'); 
         $routes->get('home','AdminController::index', ['as'=> 'admin.home']);
-        
+        $routes->get('logout','AdminController::logoutHandler', ['as'=> 'admin.logout']);
+
     });
     $routes->group('',[], static function($routes){
        // $routes->view('example-auth','example-auth');
