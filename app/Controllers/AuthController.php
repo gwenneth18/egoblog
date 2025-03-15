@@ -81,8 +81,17 @@ class AuthController extends BaseController
         ]);
 
        }else{
-        echo 'Form validated...';
-       }
+        $user= new User();
+        $userInfo= $user->where($fieldType, value: $this->request->getVar('login_id'))->first();
+        $check_password= Hash::check( $this->request->getVar('password'), $userInfo['password']);
+
+        if(!$check_password){
+            return redirect()->route('admin.login.form')->with('fail','wrong password')->withInput();
+        }else{
+            CIAuth::setCIAuth($userInfo); //Important line
+            return redirect()->route('admin.home');
+        }
+    }
 
     }
 }

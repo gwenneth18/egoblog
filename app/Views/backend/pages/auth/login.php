@@ -17,13 +17,13 @@
               </div
         <?php endif; ?>
         <?php if(!empty(session()->getFlashdata('fail'))) : ?>
-           <div class="alert alert-danger"></div>
-           <?= session()->getFlashdata('fail') ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="close">          
-             <span aria-hidden="true">&times;</span>
-          </button>
-              </div
-        <?php endif; ?>
+   <div class="alert alert-danger">
+      <?= session()->getFlashdata('fail') ?>
+      <button type="button" class="close" data-dismiss="alert" aria-label="close">          
+         <span aria-hidden="true">&times;</span>
+      </button>
+   </div>
+<?php endif; ?>
         <div class="input-group custom">
             <input type="text" class="form-control form-control-lg" placeholder="Username or Email" name="login_id" value="<?= set_value('login_id') ?>">
             <div class="input-group-append custom">
