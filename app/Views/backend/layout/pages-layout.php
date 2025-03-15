@@ -47,18 +47,7 @@
         <?= $this->renderSection('stylesheets') ?>
 	</head>
 	<body>
-		<div class="pre-loader">
-			<div class="pre-loader-box">
-				<div class="loader-logo">
-					<img src="/backend/vendors/images/deskapp-logo.svg" alt="" />
-				</div>
-				<div class="loader-progress" id="progress_div">
-					<div class="bar" id="bar1"></div>
-				</div>
-				<div class="percent" id="percent1">0%</div>
-				<div class="loading-text">Loading...</div>
-			</div>
-		</div>
+	
  
         <<?= view('backend/layout/inc/header'); ?>
 
@@ -69,7 +58,7 @@
 
 		<div class="mobile-menu-overlay"></div>
 
-		<div class="main-container">
+		<dclass="main-container">
 			<div class="pd-ltr-20 xs-pd-20-10">
 				<div class="min-height-200px">
 					
