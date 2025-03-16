@@ -19,4 +19,11 @@ class AdminController extends BaseController
         return redirect()->route('admin.login.form')->with('fail', 'Logged out sucessfully!');
 
     }
+    public function profile(){
+        $data = array(
+            'pageTitle'=>'Profile'
+        );
+        return view('backend/pages/profile', $data);
+        
+    } 
 }

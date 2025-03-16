@@ -49,16 +49,16 @@
 	<body>
 	
  
-        <<?= view('backend/layout/inc/header'); ?>
+        <?= view('backend/layout/inc/header'); ?>
 
-        <<?= view('backend/layout/inc/right-sidebar'); ?>
+        <?= view('backend/layout/inc/right-sidebar'); ?>
 
 
-        <<?= view('backend/layout/inc/left-sidebar'); ?>
+        <?= view('backend/layout/inc/left-sidebar'); ?>
 
 		<div class="mobile-menu-overlay"></div>
 
-		<dclass="main-container">
+		<div class="main-container">
 			<div class="pd-ltr-20 xs-pd-20-10">
 				<div class="min-height-200px">
 					
