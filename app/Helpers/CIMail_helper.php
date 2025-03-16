@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 /** send Email Function Using PHPMailer Library */
 if (!function_exists('sendEmail')) {
     function sendEmail($mailconfig){
+		
 		require 'PHPMailer/src/Exception.php';
         require 'PHPMailer/src/PHPMailer.php';
         require 'PHPMailer/src/SMTP.php';
@@ -13,17 +14,18 @@ if (!function_exists('sendEmail')) {
 		$mail = new PHPMailer(true);
 		$mail->SMTPDebug = 0;
 		$mail->isSMTP();
-		$mail->Host = env('EMAIL_HOST');
+		$mail->Host = 'sandbox.smtp.mailtrap.io';
 		$mail->SMTPAuth = true;
-		$mail->Username = env('EMAIL_USERNAME');
-		$mail->Password = env('EMAIL_PASSWORD');
-		$mail->SMTPSecure = env('EMAIL_ENCRYPTION');
-		$mail->Port = env('EMAIL_PORT');
+		$mail->Username ='892e036a14bb3f';  
+		$mail->Password = '********9238';
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = '2525';
 		$mail->setFrom($mailconfig['mail_from_email'],$mailconfig['mail_from_name']);
-		$mail->addAddress($mailconfig['mail_recipient_email'],$mailconfig['mail_recipient_name']);
 		$mail->isHTML(true);
+		$mail->addAddress($mailconfig['mail_recipient_email'], $mailconfig['mail_recipient_name'] ?? '');
 		$mail->Subject = $mailconfig['mail_subject'];
 		$mail->Body = $mailconfig['mail_body'];
+
 		if( $mail->send() ){
 			return true;
 		}else{

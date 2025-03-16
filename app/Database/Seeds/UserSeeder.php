@@ -9,7 +9,7 @@ class UserSeeder extends Seeder
     {
         $data = array(
             'name' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'email' => 'kimmykim2509@gmail.com',
             'username' => 'admin',
             'password' => password_hash('12345', PASSWORD_BCRYPT), // Fixed comma and correct PASSWORD_BCRYPT usage
         );
