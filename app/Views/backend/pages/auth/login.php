@@ -9,7 +9,7 @@
     <form action="<?= route_to('admin.login.handler') ?>" method="POST">
        <?= csrf_field() ?>
         <?php if(!empty(session()->getFlashdata('success'))) : ?>
-           <div class="alert alert-success"></div>
+           <div class="alert alert-success"></div>></div>
            <?= session()->getFlashdata('success') ?>
             <button type="button" class="close" data-dismiss="alert" aria-label="close">          
              <span aria-hidden="true">&times;</span>

@@ -210,4 +210,96 @@ echo "<!DOCTYPE html>
              return redirect()->route('admin.forgot.form')->with('fail','Something went wrong');
          }
          */
-        }}}
+     
+        }
+    }
+
+
+  public function resetPassword($token = null)
+{
+    // Validate token exists and is not expired
+    $passwordResetToken = new PasswordResetToken();
+    $tokenRecord = $passwordResetToken->where('token', $token)->first();
+
+    if (!$tokenRecord) {
+        return redirect()->route('admin.login.form')->with('fail', 'Invalid or expired reset token.');
+    }
+
+    // Check token expiration (15 minutes)
+    $tokenCreatedAt = Carbon::parse($tokenRecord['created_at']);
+    if ($tokenCreatedAt->diffInMinutes(Carbon::now()) > 15) {
+        // Token expired, delete it
+        $passwordResetToken->where('token', $token)->delete();
+        return redirect()->route('admin.forgot.form')->with('fail', 'Reset token has expired. Please request a new one.');
+    }
+
+    // Prepare data for reset password view
+    $data = [
+        'pageTitle' => 'Reset Password',
+        'token' => $token,
+        'validation' => null
+    ];
+
+    return view('backend/pages/auth/reset', $data);
+}
+
+public function updatePassword()
+{
+    // Validate input
+    $isValid = $this->validate([
+        'token' => 'required',
+        'new_password' => [
+            'rules' => 'required|min_length[5]|max_length[45]',
+            'errors' => [
+                'required' => 'Password is required',
+                'min_length' => 'Password must have at least 5 characters',
+                'max_length' => 'Password must not exceed 45 characters'
+            ]
+        ],
+        'confirm_password' => [
+            'rules' => 'required|matches[new_password]',
+            'errors' => [
+                'required' => 'Confirm password is required',
+                'matches' => 'Passwords do not match'
+            ]
+        ]
+    ]);
+
+    if (!$isValid) {
+        return view('backend/pages/auth/reset', [
+            'pageTitle' => 'Reset Password',
+            'token' => $this->request->getPost('token'),
+            'validation' => $this->validator
+        ]);
+    }
+
+    // Validate token
+    $passwordResetToken = new PasswordResetToken();
+    $tokenRecord = $passwordResetToken->where('token', $this->request->getPost('token'))->first();
+
+    if (!$tokenRecord) {
+        return redirect()->route('admin.login.form')->with('fail', 'Invalid reset token.');
+    }
+
+    // Find user by email
+    $user = new User();
+    $userInfo = $user->where('email', $tokenRecord['email'])->first();
+
+    if (!$userInfo) {
+        return redirect()->route('admin.login.form')->with('fail', 'User not found.');
+    }
+
+    // Hash new password
+    $newPassword = Hash::make($this->request->getPost('new_password'));
+
+    // Update user password
+    $user->update($userInfo['id'], ['password' => $newPassword]);
+
+    // Delete the used token
+    $passwordResetToken->where('token', $this->request->getPost('token'))->delete();
+
+    // Redirect with success message
+    return redirect()->route('admin.login.form')->with('success', 'Password has been reset successfully. Please log in.');
+}}
+
+         
