@@ -19,5 +19,11 @@ $routes->group('admin', static function($routes){
        // $routes->view('example-auth','example-auth');
         $routes->get('login','AuthController::loginform', ['as'=> 'admin.login.form']);
         $routes->post('login','AuthController::loginHandler', ['as'=> 'admin.login.handler']);
+        $routes->post('forgot-password','AuthController::forgotform', ['as'=> 'admin.forgot.form']);
+        $routes->get('forgot-password','AuthController::forgotform', ['as'=> 'admin.forgot.form']);
+        $routes->post('send-password-reset-link','AuthController::SendPasswordResetLink', ['as'=> 'send_password_reset_link']);
+        $routes->get('password/reset/(:any)','AuthController::resetPassword/$1', ['as'=> 'admin.reset-password']);
+
     });
+
 });
