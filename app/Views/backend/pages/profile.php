@@ -56,21 +56,21 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="name">Name</label>
-                                                <input type="text" name="name" id="name" class="form-control" placeholder="Enter full name">
+                                                <input type="text" name="name" id="name" class="form-control" placeholder="Enter full name" value="<?= get_user()->name ?>">
                                                 <span class="text-danger error-text name_error"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="username">Username</label>
-                                                <input type="text" name="username" id="username" class="form-control" placeholder="Enter username">
+                                                <input type="text" name="username" id="username" class="form-control" placeholder="Enter username" value="<?= get_user()->username ?>">
                                                 <span class="text-danger error-text username_error"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="bio">Bio</label>
-                                        <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Bio...."></textarea>
+                                        <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Bio...."><?= get_user()->bio ?></textarea>
                                         <span class="text-danger error-text bio_error"></span>
                                     </div>
                                     <div class="form-group">
@@ -111,6 +111,9 @@ $(document).ready(function(){
             console.log(pair[0] + ': ' + pair[1]);
         }
         
+        // Clear previous error messages
+        $(form).find('span.error-text').text('');
+        
         $.ajax({
             url: $(form).attr('action'),
             method: $(form).attr('method'),
@@ -123,8 +126,7 @@ $(document).ready(function(){
             },
             beforeSend: function(){
                 console.log("Sending request to:", $(form).attr('action'));
-                toastr.remove();
-                $(form).find('span.error-text').text('');
+                // Don't use toastr here
             },
             success: function(response){
                 console.log('Response:', response);
@@ -134,7 +136,8 @@ $(document).ready(function(){
                     $('.ci-user-name').each(function(){
                         $(this).html(response.user_info.name);
                     });
-                    toastr.success(response.msg);
+                    // Use alert instead of toastr
+                    alert(response.msg);
                 } else {
                     // Validation errors or other errors
                     if(response.error){
@@ -143,13 +146,15 @@ $(document).ready(function(){
                             $(form).find('span.'+prefix+'_error').text(val);
                         });
                     } else {
-                        toastr.error(response.msg || 'An error occurred');
+                        // Use alert instead of toastr
+                        alert(response.msg || 'An error occurred');
                     }
                 }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', xhr.responseText);
-                toastr.error('An error occurred while processing your request');
+                // Use alert instead of toastr
+                alert('An error occurred while processing your request');
             }
         });
     });
