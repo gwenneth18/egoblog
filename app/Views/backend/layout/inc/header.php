@@ -164,9 +164,9 @@
 							data-toggle="dropdown"
 						>
 							<span class="user-icon">
-								<img src="/backend/vendors/images/photo1.jpg" alt="" />
+								<img src="<?= get_user()->picture == null ? '/images/users/photo1.jpeg' : '/images/users/'.get_user()->picture ?>" " alt="" class="ci-avatar-photo"/>
 							</span>
-							<span class="user-name">Ross C. Lopez</span>
+							<span class="user-name ci-user-name"><?= get_user()->name ?></span>
 						</a>
 						<div
 							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
