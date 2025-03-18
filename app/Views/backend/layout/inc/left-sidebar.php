@@ -1,9 +1,9 @@
 <div class="left-side-bar">
 			<div class="brand-logo">
 				<a href="index.html">
-					<img src="/backend/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
-					<img
-						src="/backend/vendors/images/deskapp-logo-white.svg"
+					<img src="/images/img2.jpg" alt="EGOBLOG" style="max-width: 80px; height: auto;" />
+					 <img
+						src="/images/img4.jpg" style="max-width: 100px; height: auto;"
 						alt=""
 						class="light-logo"
 					/>

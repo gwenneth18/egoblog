@@ -25,7 +25,6 @@
 	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
 		<div class="pd-20 card-box height-100-p">
 			<div class="profile-photo">
-				<a href="modal" class="edit-avatar"><i class="fa fa-pencil"></i></a>
 				<img src="<?= get_user()->picture == null ? '/images/users/photo1.jpeg' : '/images/users/'.get_user()->picture ?>" 
                      alt="" 
                      class="avatar-photo ci-avatar-photo img-fluid" 

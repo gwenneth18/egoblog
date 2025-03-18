@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,21 +6,21 @@
         <title><?= isset($pageTitle) ? $pageTitle : 'New Page Title'; ?></title>
 		<!-- Site favicon -->
 		<link
-			rel="apple-touch-icon"
+			rel="img3"
 			sizes="180x180"
-			href="/backend/vendors/images/apple-touch-icon.png"
+			href="/images/img3.jpg"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/backend/vendors/images/favicon-32x32.png"
+			href="/images/img3.jpg"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/backend/vendors/images/favicon-16x16.png"
+			href="/images/img2.jpg"
 		/>
 
 		<!-- Mobile Specific Metas -->
@@ -49,29 +48,25 @@
 	</head>
 	<body class="login-page">
 		<div class="login-header box-shadow">
-			<div
-				class="container-fluid d-flex justify-content-between align-items-center"
-			>
+			<div class="container-fluid d-flex justify-content-between align-items-center">
 				<div class="brand-logo">
 					<a href="login.html">
-						<img src="/backend/vendors/images/deskapp-logo.svg" alt="" />
+						<img src="/images/img2.jpg" alt="EGOBLOG" style="max-width: 130px; height: auto;" />
 					</a>
 				</div>
 				<div class="login-menu">
-					
+					<!-- Empty login menu -->
 				</div>
 			</div>
 		</div>
-		<div
-			class="login-wrap d-flex align-items-center flex-wrap justify-content-center"
-		>
+		<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
-						<img src="/backend/vendors/images/login-page-img.png" alt="" />
+						<img src="/images/img3.jpg" alt="EGOBLOG" class="img-fluid" />
 					</div>
 					<div class="col-md-6 col-lg-5">
-					<?= $this->renderSection('content') ?>	
+						<?= $this->renderSection('content') ?>	
 					</div>
 				</div>
 			</div>
@@ -83,5 +78,24 @@
 		<script src="/backend/vendors/scripts/process.js"></script>
 		<script src="/backend/vendors/scripts/layout-settings.js"></script>
 		<?= $this->renderSection('scripts') ?>
+		
+		<style>
+		/* Add some styling to improve the login page appearance */
+		.login-page {
+			background: linear-gradient(135deg, #1e2a3a 0%, #0f1723 100%);
+		}
+		
+		.login-header {
+			background: rgba(0, 0, 0, 0.2);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		
+		.login-wrap img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+		}
+		</style>
 	</body>
 </html>
