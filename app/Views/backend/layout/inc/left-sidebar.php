@@ -21,12 +21,6 @@
 								><span class="mtext">Home</span>
 							</a>
 						</li>
-						<li>
-							<a href="" class="dropdown-toggle no-arrow">
-								<span class="micon dw dw-list"></span
-								><span class="mtext">Categories</span>
-							</a>
-						</li>
 						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
 								<span class="micon dw dw-newspaper"></span
@@ -34,40 +28,13 @@
 							</a>
 							<ul class="submenu">
 								<li><a href="">All posts</a></li>
-								<li><a href="">Add new</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<div class="dropdown-divider"></div>
-						</li>
-						<li>
-							<div class="sidebar-small-cap">Settings</div>
-						</li>
-						
-						<li>
-							<a
-								href="<?= route_to('admin.profile'); ?>"
-								
-								class="dropdown-toggle no-arrow"
-							>
+							<a href="<?= route_to('admin.profile'); ?>" class="dropdown-toggle no-arrow">
 								<span class="micon dw dw-user"></span>
-								<span class="mtext"
-									>Profile
-									</span>
-							</a>
-						</li>
-							
-						<li>
-							<a
-								href=""
-								
-								class="dropdown-toggle no-arrow"
-							>
-								<span class="micon dw dw-settings"></span>
-								<span class="mtext"
-									>General
-									</span>
+								<span class="mtext">Profile</span>
 							</a>
 						</li>
 					</ul>

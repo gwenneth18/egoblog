@@ -1,7 +1,6 @@
 <?= $this->extend('backend/layout/pages-layout') ?>
 <?= $this->section('content') ?>
 <?php
-// Simplified dashboard content for a storytelling blog
 ?>
 
 <div class="row">
@@ -20,8 +19,8 @@
         <div class="card-box height-100-p widget-style">
             <div class="d-flex flex-wrap align-items-center">
                 <div class="widget-data">
-                    <div class="h4 mb-0">12</div>
-                    <div class="weight-600 font-14">Culinary Adventures</div>
+                    <div class="h4 mb-0">1</div>
+                    <div class="weight-600 font-14">Cooking Adventures</div>
                     <div class="small text-muted">Stories about Jollof Rice and more</div>
                 </div>
                 <div class="widget-icon">
@@ -36,9 +35,9 @@
         <div class="card-box height-100-p widget-style">
             <div class="d-flex flex-wrap align-items-center">
                 <div class="widget-data">
-                    <div class="h4 mb-0">15</div>
+                    <div class="h4 mb-0">2</div>
                     <div class="weight-600 font-14">Travel Diaries</div>
-                    <div class="small text-muted">Chronicles of your adventures</div>
+                    <div class="small text-muted">Lets explore together</div>
                 </div>
                 <div class="widget-icon">
                     <div class="icon" style="background-color:#f8bbd0">
@@ -52,9 +51,9 @@
         <div class="card-box height-100-p widget-style">
             <div class="d-flex flex-wrap align-items-center">
                 <div class="widget-data">
-                    <div class="h4 mb-0">9</div>
+                    <div class="h4 mb-0">3</div>
                     <div class="weight-600 font-14">Love & Connection</div>
-                    <div class="small text-muted">Tales of togetherness</div>
+                    <div class="small text-muted">Bringing you tales of love stories</div>
                 </div>
                 <div class="widget-icon">
                     <div class="icon" style="background-color:#f8bbd0">
@@ -77,14 +76,14 @@
                     <div class="story-entry mb-4">
                         <div class="d-flex">
                             <div class="story-date text-center mr-4">
-                                <div class="day">15</div>
-                                <div class="month">Jun</div>
+                                <div class="day">26</div>
+                                <div class="month">Aug</div>
                             </div>
                             <div class="story-content">
-                                <h5 class="font-weight-bold">The Day I Perfected Jollof Rice</h5>
-                                <p class="story-excerpt">It was a rainy afternoon when I decided to experiment with my grandmother's recipe. The aroma filled the kitchen as I carefully balanced the spices...</p>
+                                <h5 class="font-weight-bold">Teaching you the fastest and easiest way to make that smokey naija Jollof Rice</h5>
+                                <p class="story-excerpt">Join me as i guide you through the best way, giving you the perfect recipe to make that naija Jollof rice</p>
                                 <div class="story-meta">
-                                    <span class="badge badge-light-pink">Culinary Adventures</span>
+                                    <span class="badge badge-light-pink">Cooking Adventures</span>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +92,12 @@
                     <div class="story-entry mb-4">
                         <div class="d-flex">
                             <div class="story-date text-center mr-4">
-                                <div class="day">03</div>
-                                <div class="month">Jun</div>
+                                <div class="day">18</div>
+                                <div class="month">Sept</div>
                             </div>
                             <div class="story-content">
                                 <h5 class="font-weight-bold">Sunset Walks on Lagos Beach</h5>
-                                <p class="story-excerpt">The sand between my toes, the sound of waves crashing against the shore, and the beautiful colors painting the sky. This weekend's trip to Lagos Beach was everything I needed...</p>
+                                <p class="story-excerpt">This weekend's trip to Lagos Beach was everything I needed.Had the nicest experience as the Beach House, the sound of the wave. I will be sharing more so you can plan your next visit to Lagos Nigeria and unwind..</p>
                                 <div class="story-meta">
                                     <span class="badge badge-light-pink">Travel Diaries</span>
                                 </div>
@@ -109,14 +108,14 @@
                     <div class="story-entry mb-4">
                         <div class="d-flex">
                             <div class="story-date text-center mr-4">
-                                <div class="day">22</div>
-                                <div class="month">May</div>
+                                <div class="day">05</div>
+                                <div class="month">Jul</div>
                             </div>
                             <div class="story-content">
-                                <h5 class="font-weight-bold">Our Pottery Class Adventure</h5>
-                                <p class="story-excerpt">Laughter filled the room as our hands got covered in clay. Who knew making pottery together could strengthen our bond in such a meaningful way...</p>
+                                <h5 class="font-weight-bold">Love and Connection </h5>
+                                <p class="story-excerpt">Everything you need to know about the perfect love story </p>
                                 <div class="story-meta">
-                                    <span class="badge badge-light-pink">Love & Connection</span>
+                                    <span class="badge badge-light-pink">Tales of togetherness</span>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +136,7 @@
                             <i class="fa fa-cutlery" style="color:#ec407a"></i>
                         </div>
                         <div class="category-info">
-                            <h5 class="mb-1">Culinary Adventures</h5>
+                            <h5 class="mb-1">Cooking Adventures</h5>
                             <p class="mb-0 small">12 stories</p>
                         </div>
                     </div>
@@ -155,7 +154,7 @@
                             <i class="fa fa-heart" style="color:#ec407a"></i>
                         </div>
                         <div class="category-info">
-                            <h5 class="mb-1">Love & Connection</h5>
+                            <h5 class="mb-1">Love and Connection</h5>
                             <p class="mb-0 small">9 stories</p>
                         </div>
                     </div>
@@ -170,17 +169,17 @@
             <div class="pd-20">
                 <div class="schedule-calendar">
                     <div class="upcoming-post mb-3 p-3 border-left border-primary" style="border-width: 3px !important;">
-                        <div class="date mb-2">Monday, June 20, 2023</div>
+                        <div class="date mb-2"> August 13, 2024</div>
                         <div class="title font-weight-bold">My West African Food Tour</div>
-                        <div class="category small"><span class="badge badge-light-pink">Culinary Adventures</span></div>
+                        <div class="category small"><span class="badge badge-light-pink">Cooking Adventures</span></div>
                     </div>
                     <div class="upcoming-post mb-3 p-3 border-left border-primary" style="border-width: 3px !important;">
-                        <div class="date mb-2">Friday, June 24, 2023</div>
+                        <div class="date mb-2">August 24, 2024</div>
                         <div class="title font-weight-bold">Hidden Beaches of Nigeria</div>
                         <div class="category small"><span class="badge badge-light-pink">Travel Diaries</span></div>
                     </div>
                     <div class="upcoming-post mb-3 p-3 border-left border-primary" style="border-width: 3px !important;">
-                        <div class="date mb-2">Tuesday, June 28, 2023</div>
+                        <div class="date mb-2"> February 14, 2025</div>
                         <div class="title font-weight-bold">5 Unique Date Ideas</div>
                         <div class="category small"><span class="badge badge-light-pink">Love & Connection</span></div>
                     </div>
