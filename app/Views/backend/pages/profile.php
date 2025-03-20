@@ -105,7 +105,7 @@ $(document).ready(function(){
         var form = this;
         var formdata = new FormData(form);
         
-        // Log form data for debugging
+        
         for (var pair of formdata.entries()) {
             console.log(pair[0] + ': ' + pair[1]);
         }
@@ -125,7 +125,7 @@ $(document).ready(function(){
             },
             beforeSend: function(){
                 console.log("Sending request to:", $(form).attr('action'));
-                // Don't use toastr here
+               
             },
             success: function(response){
                 console.log('Response:', response);
@@ -135,7 +135,7 @@ $(document).ready(function(){
                     $('.ci-user-name').each(function(){
                         $(this).html(response.user_info.name);
                     });
-                    // Use alert instead of toastr
+                    
                     alert(response.msg);
                 } else {
                     // Validation errors or other errors
@@ -145,14 +145,14 @@ $(document).ready(function(){
                             $(form).find('span.'+prefix+'_error').text(val);
                         });
                     } else {
-                        // Use alert instead of toastr
+                        
                         alert(response.msg || 'An error occurred');
                     }
                 }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', xhr.responseText);
-                // Use alert instead of toastr
+              
                 alert('An error occurred while processing your request');
             }
         });
