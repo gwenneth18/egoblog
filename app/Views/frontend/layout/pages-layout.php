@@ -20,6 +20,11 @@
 	<!-- theme meta -->
 	<?= $this->renderSection('page_meta') ?>
 
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
 	<!-- ** Plugins Needed for the Project ** -->
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="frontend/plugins/bootstrap/bootstrap.min.css">
@@ -27,12 +32,15 @@
 
 	<!-- Main Stylesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	
+	<!-- Girly Theme -->
+<!-- Girly Theme -->
+<link href="<?= base_url('frontend/css/girly-theme.css') ?>" rel="stylesheet">
 	<?= $this->renderSection('stylesheets') ?>
 
 	<!--Favicon-->
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
 </head>
 
 <body>
@@ -72,5 +80,4 @@
 	<script src="js/script.js"></script>
 	<?= $this->renderSection('scripts') ?>
 </body>
-
 </html>

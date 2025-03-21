@@ -1,0 +1,72 @@
+/* Girly and Lively Theme Colors and Styles */
+
+/* Welcome Banner Styles */
+.welcome-banner {
+    padding: 3rem 1rem;
+    background-color: rgba(45, 35, 61, 0.6);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pink-divider {
+    height: 4px;
+    background: linear-gradient(to right, transparent, #ff70b5, transparent);
+    width: 100px;
+}
+
+.welcome-banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(255,112,181,0.5);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(255,112,181,0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-banner h1 {
+        font-size: 2rem;
+    }
+}
+:root {
+	--primary-color: #ff70b5;
+	--secondary-color: #ffb6e1;
+	--accent-color: #fe4aa3;
+	--text-color: #ffffff;
+	--light-bg: #433656;
+	--dark-bg: #2a2139;
+	--border-color: #7e6490;
+  }
+  
+  body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: #2a2139;
+	color: #fff;
+  }
+  
+  /* Preloader */
+  .preloader-wrapper {
+	background: #2a2139;
+  }
+  
+  .spinner-border.text-red {
+	color: #ff70b5 !important;
+  }
+  
+  /* Sidebar Styling */
+  .sidenav {
+	background-color: #2d233d;
+	border-right: 1px solid #4b3560;
+	padding: 20px 0;
+	background-image: linear-gradient(to bottom, #2d233d, #34274a);
+  }
+  
+  /* Rest of your CSS... */
