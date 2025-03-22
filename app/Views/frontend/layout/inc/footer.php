@@ -5,37 +5,35 @@
 			<div class="col-lg-3 col-sm-6 mb-5">
 				<h5 class="font-primary text-white mb-4">Travel</h5>
 				<ul class="list-unstyled footer-links">
-					<li><a href="#!">Adventure Stories</a></li>
-					<li><a href="#!">Travel Tips</a></li>
-					<li><a href="#!">Destinations</a></li>
-					<li><a href="#!">Photo Gallery</a></li>
+					<li>Adventure Stories</li>
+					<li>Travel Tips</li>
+					<li>Destinations</li>
+					
 				</ul>
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-5">
 				<h5 class="font-primary text-white mb-4">Recipes</h5>
 				<ul class="list-unstyled footer-links">
-					<li><a href="#!">Breakfast</a></li>
-					<li><a href="#!">Main Dishes</a></li>
-					<li><a href="#!">Desserts</a></li>
-					<li><a href="#!">Quick Meals</a></li>
+					<li>Breakfast</li>
+					<li>Main Dishes</li>
+					<li>Desserts</li>
+					<li>Quick Meals</li>
 				</ul>
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-5">
 				<h5 class="font-primary text-white mb-4">Relationships</h5>
 				<ul class="list-unstyled footer-links">
-					<li><a href="#!">Dating Advice</a></li>
-					<li><a href="#!">Communication</a></li>
-					<li><a href="#!">Self-Love</a></li>
-					<li><a href="#!">Healthy Boundaries</a></li>
+					<li>Dating Advice</li>
+					<li>Communication</li>
+					<li>Self-Love</li>
+					<li>Healthy Boundaries</li>
 				</ul>
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-5">
 				<h5 class="font-primary text-white mb-4">Quick Links</h5>
 				<ul class="list-unstyled footer-links">
-					<li><a href="#!">About Me</a></li>
-					<li><a href="#!">Contact</a></li>
-					<li><a href="#!">Privacy Policy</a></li>
-					<li><a href="#!">Terms of Use</a></li>
+					<li><a href="<?= base_url('about') ?>">About Me</a></li>
+					<li><a href="<?= base_url('contact') ?>">Contact</a></li>
 				</ul>
 			</div>
 		</div>

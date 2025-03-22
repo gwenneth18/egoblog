@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-6">
-				<a href="index.html" class="d-flex align-items-center">
-					<img src="images/logo.png" alt="">
-                    <span class="brand-text ms-2 d-none d-sm-inline">Fashion & Beauty</span>
-				</a>
+				<div class="d-flex align-items-center">
+					<img src="<?= base_url('images/logo.png') ?>" alt="">
+                    <span class="brand-text ms-2 d-none d-sm-inline" style="color: #e84393; font-weight: bold;">EGOBLOG</span>
+				</div>
 			</div>
 			<div class="col-6 text-right">
 				<button class="nav-toggle bg-transparent border text-white">

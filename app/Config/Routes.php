@@ -6,6 +6,15 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'BlogController::index');
+$routes->get('search', 'SearchController::index');
+$routes->get('about', 'BlogController::about');
+$routes->add('contact', 'ContactController::index');
+
+// Add weather routes
+$routes->get('weather', 'WeatherController::index');
+$routes->match(['get', 'post'], 'weather/search', 'WeatherController::search');
+$routes->get('weather/(:any)', 'WeatherController::search');
+$routes->get('weather/(:any)/(:any)', 'WeatherController::search');
 
 $routes->group('admin', static function($routes){
 
@@ -15,7 +24,6 @@ $routes->group('admin', static function($routes){
         $routes->get('logout','AdminController::logoutHandler', ['as'=> 'admin.logout']);
         $routes->get('profile','AdminController::profile', ['as'=> 'admin.profile']);
         $routes->post('update-personal-details','AdminController::updatePersonalDetails', ['as'=> 'update-personal-details']);
-
     });
     $routes->group('',['filter'=>'cifilter:guest'], static function($routes){
        // $routes->view('example-auth','example-auth');

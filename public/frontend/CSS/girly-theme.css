@@ -1,72 +1,303 @@
-/* Girly and Lively Theme Colors and Styles */
-
-/* Welcome Banner Styles */
-.welcome-banner {
-    padding: 3rem 1rem;
-    background-color: rgba(45, 35, 61, 0.6);
-    border-radius: 15px;
-    margin-bottom: 40px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.pink-divider {
-    height: 4px;
-    background: linear-gradient(to right, transparent, #ff70b5, transparent);
-    width: 100px;
-}
-
-.welcome-banner h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 3rem;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px rgba(255,112,181,0.5);
-    }
-    to {
-        text-shadow: 0 0 15px rgba(255,112,181,0.8);
-    }
-}
-
-@media (max-width: 768px) {
-    .welcome-banner h1 {
-        font-size: 2rem;
-    }
-}
+/* Elegant Pink Theme for Frontend */
 :root {
-	--primary-color: #ff70b5;
-	--secondary-color: #ffb6e1;
-	--accent-color: #fe4aa3;
-	--text-color: #ffffff;
-	--light-bg: #433656;
-	--dark-bg: #2a2139;
-	--border-color: #7e6490;
+	--primary-color: #e84393;
+	--secondary-color: #fd79a8;
+	--accent-color: #ff9ff3;
+	--light-pink: #ffeef8;
+	--medium-pink: #ffd6ec;
+	--dark-pink: #d14d8b;
+	--text-color: #4a4a4a;
+	--light-text: #ffffff;
+	--gold-accent: #ffd700;
   }
   
   body {
-	font-family: 'Quicksand', sans-serif;
-	background-color: #2a2139;
-	color: #fff;
-  }
-  
-  /* Preloader */
-  .preloader-wrapper {
-	background: #2a2139;
-  }
-  
-  .spinner-border.text-red {
-	color: #ff70b5 !important;
+	font-family: 'Playfair Display', 'Montserrat', serif;
+	background-color: var(--light-pink);
+	background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffd6ec' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	color: var(--text-color);
+	line-height: 1.8;
   }
   
   /* Sidebar Styling */
   .sidenav {
-	background-color: #2d233d;
-	border-right: 1px solid #4b3560;
-	padding: 20px 0;
-	background-image: linear-gradient(to bottom, #2d233d, #34274a);
+	background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+	border-right: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 20px rgba(232, 67, 147, 0.2);
   }
   
-  /* Rest of your CSS... */
+  .navbar-brand {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .brand-text {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5rem;
+	color: var(--light-text);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	font-weight: 700;
+	letter-spacing: 1px;
+  }
+  
+  .navbar-nav .nav-link {
+	font-size: 0.95rem;
+	letter-spacing: 0.5px;
+	padding: 10px 20px !important;
+	border-left: 3px solid transparent;
+	transition: all 0.3s ease;
+	font-weight: 500;
+	color: var(--light-text) !important;
+  }
+  
+  .navbar-nav .nav-link:hover, 
+  .navbar-nav .nav-item.active .nav-link {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left-color: var(--light-text);
+  }
+  
+  /* Welcome Banner Styles */
+  .welcome-banner {
+	background: linear-gradient(135deg, rgba(232, 67, 147, 0.9) 0%, rgba(253, 121, 168, 0.9) 100%);
+	padding: 3rem 2rem;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 10px 30px rgba(232, 67, 147, 0.2);
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .welcome-banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .welcome-banner h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 2.8rem;
+	font-weight: 700;
+	color: var(--light-text);
+	margin-bottom: 15px;
+	position: relative;
+  }
+  
+  .welcome-banner p {
+	color: var(--light-text);
+	font-size: 1.1rem;
+	position: relative;
+  }
+  
+  .pink-divider {
+	height: 4px;
+	width: 80px;
+	background: var(--light-text);
+	margin: 20px auto;
+	position: relative;
+  }
+  
+  /* Section Dividers */
+  .section-divider {
+	position: relative;
+	padding: 20px 0;
+	clear: both;
+	margin: 30px 0;
+  }
+  
+  .divider-title {
+	display: inline-block;
+	background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+	color: white;
+	padding: 10px 30px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 15px;
+	box-shadow: 0 5px 15px rgba(232, 67, 147, 0.3);
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 0.5px;
+  }
+  
+  .divider-line {
+	height: 2px;
+	background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+	width: 80%;
+	margin: 10px auto 0;
+	position: relative;
+  }
+  
+  .divider-line::after {
+	content: '❀';
+	position: absolute;
+	bottom: -9px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 16px;
+	color: var(--primary-color);
+	background-color: var(--light-pink);
+	padding: 0 10px;
+  }
+  
+  /* Card styling */
+  .card {
+	background-color: rgba(255, 255, 255, 0.9) !important;
+	border-radius: 10px !important;
+	border: 1px solid var(--medium-pink);
+	box-shadow: 0 5px 15px rgba(232, 67, 147, 0.1);
+	transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(232, 67, 147, 0.15);
+  }
+  
+  .card-title a {
+	font-weight: 600;
+	transition: color 0.3s ease;
+	color: var(--dark-pink) !important;
+	text-decoration: none;
+  }
+  
+  .card-title a:hover {
+	color: var(--primary-color) !important;
+  }
+  
+  .post-item .card-img-top {
+	border-radius: 10px 10px 0 0;
+	transition: all 0.3s ease;
+  }
+  
+  .post-item:hover .card-img-top {
+	opacity: 0.9;
+  }
+  
+  /* Widget styling */
+  .widget {
+	background-color: rgba(255, 255, 255, 0.9) !important;
+	border-radius: 10px !important;
+	border: 1px solid var(--medium-pink);
+	box-shadow: 0 5px 15px rgba(232, 67, 147, 0.1);
+	margin-bottom: 30px;
+	padding: 25px;
+	transition: transform 0.3s ease;
+  }
+  
+  .widget:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(232, 67, 147, 0.15);
+  }
+  
+  .widget-title {
+	font-family: 'Playfair Display', serif;
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	color: var(--primary-color);
+	text-align: center;
+  }
+  
+  .widget-title::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 2px;
+	background: var(--primary-color);
+  }
+  
+  /* Footer styling */
+  footer {
+	background-color: #333333 !important;
+	color: var(--light-text);
+  }
+  
+  footer h5 {
+	font-family: 'Playfair Display', serif;
+	color: var(--accent-color);
+	position: relative;
+	padding-bottom: 10px;
+  }
+  
+  footer h5::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 2px;
+	background: var(--accent-color);
+  }
+  
+  .footer-links a {
+	color: #aaaaaa;
+	transition: all 0.3s;
+	text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+	color: var(--accent-color);
+	padding-left: 5px;
+  }
+  
+  /* Category list */
+  .category-list li a {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 15px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 50px;
+	margin-bottom: 10px;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	color: var(--text-color);
+	border: 1px solid var(--medium-pink);
+  }
+  
+  .category-list li a:hover {
+	background-color: var(--primary-color);
+	color: white;
+	transform: translateX(5px);
+	border-color: transparent;
+  }
+  
+  /* For non-linked category items */
+  .category-list li span {
+	display: block;
+	padding: 10px 15px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 50px;
+	margin-bottom: 10px;
+	color: var(--text-color);
+	border: 1px solid var(--medium-pink);
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+	.welcome-banner h1 {
+	  font-size: 2rem;
+	}
+	
+	.welcome-banner p {
+	  font-size: 1rem;
+	}
+	
+	.section-divider {
+	  padding: 15px 0;
+	  margin: 20px 0;
+	}
+	
+	.divider-title {
+	  font-size: 1rem;
+	  padding: 8px 20px;
+	}
+  }
